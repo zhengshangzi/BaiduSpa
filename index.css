@@ -1,0 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.mod-new-reg-bg{
+    background: url(https://passport.baidu.com/static/passpc-account/img/reg_bg_min.jpg) no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+}
+.mod-new-reg-logo {
+    position: fixed;
+    left: 70px;
+    top: 60px;
+    width: 124.4px;
+    height: 40px;
+}
+.mod-new-reg-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.mod-new-reg-text {
+    position: fixed;
+    left: 195px;
+    top: 314px;
+    color: #fff;
+}
+
+.mod-new-reg-footer {
+    position: fixed;
+    left: 70px;
+    bottom: 57px;
+    font-size: 14px;
+    color: #fff;
+
+}
+.mod-new-reg-footer .mod-new-reg-help a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.mod-new-reg-footer .mod-new-reg-help .mode-new-reg-help-text {
+    opacity: .8;
+}
+ .mod-new-reg-footer .mod-new-reg-help .mod-new-reg-line {
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    filter: alpha(opacity=78);
+    opacity: .78;
+    margin: 0 12px 0 13px;
+    background: #fff;
+    position: relative;
+    top: 1px;
+}
+.mod-new-reg-service {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(https://passport.baidu.com/static/passpc-account/img/reg/service-2x.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: 3px;
+}
+.mod-new-reg-footer .mod-new-reg-copyright {
+    filter: alpha(opacity=54);
+    opacity: .54;
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    padding-left: 30px;
+} 
+.mod-new-reg-content {
+    position: absolute;
+    right: 139px;
+    top: 50%;
+    margin-top: -340px;
+    width: 480px;
+    height: 680px;
+    background: rgba(255,255,255,.9);
+    border-radius: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.mod-new-reg-content {
+    position: absolute;
+    right: 139px;
+    top: 50%;
+    margin-top: -340px;
+    width: 480px;
+    height: 650px;
+    background: rgba(255,255,255,.9);
+    border-radius: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.mod-new-reg-content .new-reg-guide-login {
+    margin: 50px 0 22px 39px;
+}
+.mod-new-reg-content .new-reg-guide-login p span {
+    color: #2e58ff;
+    cursor: pointer;
+}
+.reg-content{
+    margin: 50px 0 22px 39px;
+    background-color: red;
+}
+.pass-button{
+    background: #BDCEFC;
+    border-radius: 25px;
+    width: 399px;
+    border-width: 0;
+}
+#left{
+    float:left;
+    width:480px;
+    height:500px;
+    margin-top: 45px;
+}
+.form{
+    width: 400px;
+    margin: 0 auto;
+}
+.div1{
+    padding: 10px 0;
+}
+.div2{
+    margin-top: 25px;
+    padding: 10px 0;
+}
+.div3{
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+}
+label{
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+}
+.inputText{
+    display: inline-block;
+    width:315px;
+    height:35px;
+    padding-left:10px;
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.inputText1{
+    display: inline-block;
+    width:200px;
+    height:35px;
+    padding-left:10px;
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.btn1{
+    display: inline-block;
+    width:100px;
+    height:35px;
+    text-align: center;
+    margin-left: 5px;
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 13px;
+}
+.btn2{
+    background: #BDCEFC;
+    border-radius: 25px;
+    width: 400px;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.span1{
+    color: #FF0000;
+    font-size:12px;
+    margin-left: 70px;
+}
+.span2{
+    font-size:12px;
+}
+.borderr{
+    border: 1px solid red;
+}
+
