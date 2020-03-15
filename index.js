@@ -3,10 +3,13 @@ $(function() {
     var $password=$('#password');
     var $phone=$('#phone');
     var $checknum=$('#checknum');
+    var $agree=$("agree");
     var $reg=$("#reg");
     $reg.click(function() {
-        if( !YHM('#username')|| !LXDH('#phone') ||!MM('#password')||!YZM("#checknum")) 
+        if( !YHM('#username')|| !LXDH('#phone') ||!MM('#password')||!YZM("#checknum")|| !Agree("#agree")) 
             return;
+        alert("注册成功")
+        window.location.href='https://www.baidu.com';
     });
     $username.focusout(function() {
         if(YHM('#username'))
@@ -24,7 +27,12 @@ $(function() {
         if(YZM('#checknum'))
         return true;
     });
-   
+    // $agree.focusout(function(){
+    //   if($('#agree') .is(':checked')){
+    //     $('#agerror').html('');
+    //     return true;
+    //   }
+    // })
     function YHM(field) {
         var $data    = $(field);
         if($data.val() === '') {
@@ -32,15 +40,16 @@ $(function() {
         //   $data.select();
           return false;
         }
-        if($data.val().length < 1 ||$data.val().length > 14){
-        $('#YHMerror').html('用户名仅支持中英文、数字和下划线,且不能为纯数字');
-        //   $data.select();
+        var rz=$data.val().replace(/[\u4e00-\u9fa5]/g,"bv");
+        var re=/[^\w\u4e00-\u9fa5]|^\d+$/g;
+        var ra=/.{15,}/;
+        if(ra.test(rz)){
+          $('#YHMerror').html('用户名不能超过7个汉字或14个字符');
+
           return false;
-        }
-        var re=/^(?!(\d+)$)[\u4e00-\u9fff\w]+$/;
-        if(!re.test($data.val())){
+        }       
+        if(re.test($data.val())){
             $('#YHMerror').html('用户名仅支持中英文、数字和下划线,且不能为纯数字');
-            // $data.select();
             return false;
         }
         $('#YHMerror').html('')
@@ -100,16 +109,15 @@ $(function() {
         $btn.val('正在发送 (' + i + ' s)');
         $btn.attr('disabled', 'disabled');
         timer = window.setInterval(function() {
-        if(i === 0) {
-            window.clearInterval(timer);
-            $btn.val('获取验证码');
-            $btn.removeAttr('disabled');
-            $('#YZMerror').html('请求超时，请稍后再试');
-
-        }
-        else{
-            $btn.val('正在发送 (' + i-- + ' s)');
-        }
+          if(i === 0) {
+              window.clearInterval(timer);
+              $btn.val('获取验证码');
+              $btn.removeAttr('disabled');
+              $('#YZMerror').html('请求超时，请稍后再试');
+          }
+          else{
+              $btn.val('正在发送 (' + i-- + ' s)');
+          }
         }, 1000);  
     });
     function YZM(field) {
@@ -119,5 +127,18 @@ $(function() {
         //   $data.select();
           return false;
         }
+        $('#MMerror').html('')
+        return true;
     }   
+    function Agree(field){
+      var $data    = $(field)
+      if($data .is(':checked')){
+        $('#agerror').html('');
+        return true;
+      }
+      else{
+        $('#agerror').html('您还未接受百度用户协议');
+        return false;
+      }   
+    }
 });
