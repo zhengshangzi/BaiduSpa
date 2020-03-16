@@ -3,7 +3,6 @@ $(function() {
     var $password=$('#password');
     var $phone=$('#phone');
     var $checknum=$('#checknum');
-    var $agree=$("agree");
     var $reg=$("#reg");
     $reg.click(function() {
         if( !YHM('#username')|| !LXDH('#phone') ||!MM('#password')||!YZM("#checknum")|| !Agree("#agree")) 
