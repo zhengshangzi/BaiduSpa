@@ -37,6 +37,7 @@ $(function() {
         var $data    = $(field);
         if($data.val() === '') {
           $('#YHMerror').html('请设置用户名');
+
         //   $data.select();
           return false;
         }
@@ -45,7 +46,6 @@ $(function() {
         var ra=/.{15,}/;
         if(ra.test(rz)){
           $('#YHMerror').html('用户名不能超过7个汉字或14个字符');
-
           return false;
         }       
         if(re.test($data.val())){
@@ -83,15 +83,14 @@ $(function() {
         //   $data.select();
           return false;
         }
-        var re=/^(?!(\d+)$)[\u4e00-\u9fff\w]+$/;
-        // var re1=/[0-9a-zA-Z|\.]/;
-        // var re2=/\s/g;
-        // if(!re1.test($data.val())){
-        //     $('#MMerror').html('密码设置不符合要求');
-        //     $data.select();
-        //     return false;
-        // }
-        if(!re.test($data.val())){
+        var re1=/(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{8,14}$/;
+        var re2=/\s/g;
+        if(re2.test($data.val())){
+            $('#MMerror').html('密码设置不符合要求');
+            $data.select();
+            return false;
+        }
+        if(!re1.test($data.val())){
             $('#MMerror').html('密码设置不符合要求');
             // $data.select();
             return false;
