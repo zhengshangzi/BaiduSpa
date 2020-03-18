@@ -142,11 +142,10 @@ $(function() {
       $("#checknum").css({
         border:'0px solid red'
       });
-      var i    = 3;
+      var i    = 59;
       var timer;
       if(!LXDH('#phone')){
         rerurn
-        // $('#LXDHerror').html('请设置手机号');
       }
       else{
         $btn.val('正在发送 (' + i + ' s)');
