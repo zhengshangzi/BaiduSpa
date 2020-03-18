@@ -142,7 +142,7 @@ $(function() {
       $("#checknum").css({
         border:'0px solid red'
       });
-      var i    = 59;
+      var i    = 19;
       var timer;
       if(!LXDH('#phone')){
         rerurn
