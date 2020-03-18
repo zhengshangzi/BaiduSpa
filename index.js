@@ -142,24 +142,31 @@ $(function() {
       $("#checknum").css({
         border:'0px solid red'
       });
-      var i    = 59;
+      var i    = 3;
       var timer;
-      $btn.val('正在发送 (' + i + ' s)');
-      $btn.attr('disabled', 'disabled');
-      timer = window.setInterval(function() {
-        if(i === 0) {
-          window.clearInterval(timer);
-          $btn.val('获取验证码');
-          $btn.removeAttr('disabled');
-          $('#YZMerror').html('请求超时，请稍后再试');
-          $("#checknum").css({
-            border:'1px solid red'
-          });
-        }
-        else{
-          $btn.val('正在发送 (' + i-- + ' s)');
-        }
-      }, 1000);  
+      if(!LXDH('#phone')){
+        rerurn
+        // $('#LXDHerror').html('请设置手机号');
+      }
+      else{
+        $btn.val('正在发送 (' + i + ' s)');
+        $btn.attr('disabled', 'disabled');
+        timer = window.setInterval(function() {
+          if(i === 0) {
+            window.clearInterval(timer);
+            $btn.val('获取验证码');
+            $btn.removeAttr('disabled');
+            $('#YZMerror').html('请求超时，请稍后再试');
+            $("#checknum").css({
+              border:'1px solid red'
+            });
+          }
+          else{
+            $btn.val('正在发送 (' + i-- + ' s)');
+          }
+        }, 1000)
+      }
+     
     });
     //验证码
     function YZM(field) {
